@@ -6,11 +6,13 @@
     "scripts": {
         "start": "node backend/server.js",
         "server": "nodemon backend/server.js",
-        "client": "npm start --prefix frontend"
+        "client": "npm start --prefix frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
     },
     "author": "tamilore",
     "license": "MIT",
     "dependencies": {
+        "-": "^0.0.1",
         "bcryptjs": "^2.4.3",
         "colors": "^1.4.0",
         "dotenv": "^16.0.1",
@@ -18,5 +20,8 @@
         "express-async-handler": "^1.2.0",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^6.3.3"
+    },
+    "devDependencies": {
+        "concurrently": "^7.2.0"
     }
 }
